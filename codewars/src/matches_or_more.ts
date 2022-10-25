@@ -6,27 +6,25 @@ class bot {
   }
 
   takeSomeMatchesAway(matchCount: number, maxTake: number): number {
-    if (matchCount > 0) {
-      let take: number;
-      const randomTake = Math.floor(Math.random() * maxTake + 1);
+    const randomTake = Math.floor(Math.random() * maxTake + 1);
+    let take: number;
 
-      if (randomTake > matchCount) {
-        take = matchCount;
-      } else {
-        take = randomTake;
-      }
-
-      matchCount -= take;
-
-      console.log(
-        this.name +
-          " has taken " +
-          take +
-          " match(es). There are " +
-          matchCount +
-          " match(es) left."
-      );
+    if (randomTake > matchCount) {
+      take = matchCount;
+    } else {
+      take = randomTake;
     }
+
+    matchCount -= take;
+
+    console.log(
+      this.name +
+        " has taken " +
+        take +
+        " match(es). There are " +
+        matchCount +
+        " match(es) left."
+    );
 
     return matchCount;
   }
