@@ -19,6 +19,9 @@ class bot {
             " match(es). There are " +
             matchCount +
             " match(es) left.");
+        if (matchCount === 0) {
+            console.log(this.name + " lost : (");
+        }
         return matchCount;
     }
 }
@@ -30,14 +33,8 @@ function play(matchCount, maxTake, bot1, bot2) {
         ".");
     while (matchCount > 0) {
         matchCount = bot1.takeSomeMatchesAway(matchCount, maxTake);
-        if (matchCount === 0) {
-            console.log(bot1.name + " has lost.");
-        }
         if (matchCount > 0) {
             matchCount = bot2.takeSomeMatchesAway(matchCount, maxTake);
-            if (matchCount === 0) {
-                console.log(bot2.name + " has lost.");
-            }
         }
     }
 }
