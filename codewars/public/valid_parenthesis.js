@@ -17,6 +17,9 @@ function isParenthesisValid(input) {
         }
         else {
             count--;
+            if (count < 0) {
+                return false;
+            }
         }
     }
     return count === 0;

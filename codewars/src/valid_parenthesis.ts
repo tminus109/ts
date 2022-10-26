@@ -21,6 +21,9 @@ function isParenthesisValid(input: string): boolean {
       count++;
     } else {
       count--;
+      if (count < 0) {
+        return false;
+      }
     }
   }
 
