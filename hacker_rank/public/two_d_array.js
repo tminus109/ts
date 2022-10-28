@@ -1,6 +1,6 @@
 "use strict";
 function countHighestHourglassSum(arr) {
-    let sum = 0;
+    let sum = Number.MIN_SAFE_INTEGER;
     const l = arr.length - 2;
     for (let i = 0; i < l; i++) {
         for (let j = 0; j < l; j++) {
