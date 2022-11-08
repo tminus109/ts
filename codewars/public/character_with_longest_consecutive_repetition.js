@@ -12,6 +12,9 @@ function findChar(s) {
             if (s.charAt(j) === char) {
                 count++;
             }
+            else {
+                break;
+            }
         }
         if (count > l) {
             c = char;
@@ -25,3 +28,5 @@ console.log(findChar("abcaba"));
 console.log(findChar("abcabab"));
 console.log(findChar("babcaba"));
 console.log(findChar(""));
+console.log(findChar("aaaabb"));
+console.log(findChar("bbbaaabaaaa"));

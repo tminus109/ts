@@ -15,6 +15,8 @@ function findChar(s: string): charRepetition {
     for (let j = i + 1; j < length; j++) {
       if (s.charAt(j) === char) {
         count++;
+      } else {
+        break;
       }
     }
 
@@ -32,3 +34,5 @@ console.log(findChar("abcaba"));
 console.log(findChar("abcabab"));
 console.log(findChar("babcaba"));
 console.log(findChar(""));
+console.log(findChar("aaaabb"));
+console.log(findChar("bbbaaabaaaa"));
