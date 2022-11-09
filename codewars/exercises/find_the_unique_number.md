@@ -3,3 +3,5 @@ There is an array with some numbers. All numbers are equal except for one. Try t
 findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2 findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
 
 It’s guaranteed that array contains at least 3 numbers. The tests contain some very huge arrays, so think about performance.
+
+https://www.codewars.com/kata/55f81f9aa51f9b72a200002f
