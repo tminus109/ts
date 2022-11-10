@@ -1,11 +1,11 @@
-function foldArray(array: number[], foldCount: number): number[] {
+function foldArray(array: number[], runs: number): number[] {
   if (array.length === 0 || array.length === 1) {
     return array;
   }
 
-  let foldedArray = array;
+  let foldedArray = [...array];
 
-  for (let i = 0; i < foldCount; i++) {
+  for (let i = 0; i < runs; i++) {
     const length = foldedArray.length;
     for (let j = 0, l = Math.floor(length / 2); j < l; j++) {
       foldedArray[j] += foldedArray[length - 1 - j];
@@ -23,3 +23,5 @@ console.log(foldArray([1, 2, 3, 4, 5], 2));
 console.log(foldArray([1, 2, 3, 4], 2));
 console.log(foldArray([1, 2, 3, 4, 5, 6], 3));
 console.log(foldArray([1, 2, 3], 1));
+console.log(foldArray([1, 2, 3, 4, 5], 3));
+console.log(foldArray([-9, 9, -8, 8, 66, 23], 1));
