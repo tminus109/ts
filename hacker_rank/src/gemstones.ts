@@ -1,17 +1,23 @@
 function findGems(rocks: string[]): number {
   let gemCount = 0;
-  const length = rocks.length;
   const firstRock = rocks[0];
+  const l = firstRock.length;
+  const length = rocks.length;
+  const seen = new Set<string>();
 
-  for (const mineral of firstRock) {
-    let occCount = 0;
-    for (const rock of rocks) {
-      if (rock.includes(mineral)) {
-        occCount++;
+  for (let i = 0; i < l; i++) {
+    const mineral = firstRock.charAt(i);
+    if (!seen.has(mineral)) {
+      seen.add(mineral);
+      let occCount = 0;
+      for (const rock of rocks) {
+        if (rock.includes(mineral)) {
+          occCount++;
+        }
       }
-    }
-    if (occCount === length) {
-      gemCount++;
+      if (occCount === length) {
+        gemCount++;
+      }
     }
   }
 
@@ -20,3 +26,4 @@ function findGems(rocks: string[]): number {
 
 console.log(findGems(["abc", "abc", "bc"]));
 console.log(findGems(["abcdde", "baccd", "eeabg"]));
+console.log(findGems(["abcb", "abcb", "bcb"]));
