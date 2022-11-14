@@ -8,7 +8,7 @@ function checkPasswordStrength(password) {
     if (!password.match(/[A-Z]/)) {
         count++;
     }
-    if (!password.match(/[!@#$%^&*()-+]/)) {
+    if (!password.match(/[!@#$%^&*()+-]/)) {
         count++;
     }
     if (!password.match(/[0-9]/)) {

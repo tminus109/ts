@@ -10,7 +10,7 @@ function checkPasswordStrength(password: string): number {
     count++;
   }
 
-  if (!password.match(/[!@#$%^&*()-+]/)) {
+  if (!password.match(/[!@#$%^&*()+-]/)) {
     count++;
   }
 
