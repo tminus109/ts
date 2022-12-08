@@ -42,4 +42,4 @@ Temporary Items
 # Built Visual Studio Code Extensions
 *.vsix
 
-./*/public
+*/public
